@@ -4,15 +4,14 @@ class Oving1 {
 	public static void main(String[] args){
 		Restaurant resturanten;
 
-		//Kode for å gjøre slik at brukeren kan sette navn til restauranten sjøl
-		/*String navn = showInputDialog("Resturantnavn: ");
+		String navn = showInputDialog("Resturantnavn: ");
 		String aarEtablertLest = showInputDialog("År etablert: ");
-		String antBordLest = showInputDialog("Antall bord etablert: ");
+		String antBordLest = showInputDialog("Antall bord: ");
 
 		int aarEtablert = Integer.parseInt(aarEtablertLest);
-		int antBord = Integer.parseInt(antBordLest);*/
+		int antBord = Integer.parseInt(antBordLest);
 
-		resturanten = new Restaurant("knut", 1996, 10);//navn, aarEtablert, antBord);
+		resturanten = new Restaurant(navn, aarEtablert, antBord);
 
 		final int reserverBord = 0;
 		final int finnBordnr = 1;
@@ -25,7 +24,7 @@ class Oving1 {
 		int valg;
 		do {
 
-			valg = showOptionDialog(null, "Hei og velkommen!", "bullshit", YES_NO_OPTION, INFORMATION_MESSAGE, null, muligheter, muligheter[0]);
+			valg = showOptionDialog(null, "Hei og velkommen!", "Knuts restaurant", YES_NO_OPTION, INFORMATION_MESSAGE, null, muligheter, muligheter[0]);
 
 			switch(valg){
 				case reserverBord:
