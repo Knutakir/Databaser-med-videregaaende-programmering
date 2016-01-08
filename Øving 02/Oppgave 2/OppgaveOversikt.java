@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 class OppgaveOversikt{
 
-	private ArrayList<Student> studenter = new ArrayList<>();
+	private ArrayList<Student> studenter = new ArrayList<Student>();
 
 	public boolean regNyStudent(String navn){
 		for(int i = 0; i < studenter.size(); i++){
