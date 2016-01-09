@@ -5,3 +5,5 @@ Det er totalt 20 øvinger, og jeg vil legge ut alle etterhvert som de blir godkj
 ## Øvinger
 - [Øving 1: Repetisjon](Øving 01)
 - [Øving 2: Tabeller og ArrayList](Øving 02)
+  - [Oppgave 1](Oppgave 1)
+  - [Oppgave 2](Oppgave 2)
