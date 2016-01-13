@@ -7,3 +7,4 @@ Det er totalt 20 øvinger, og jeg vil legge ut alle etterhvert som de blir godkj
 - [Øving 2: Tabeller og ArrayList](Øving 02)
   - [Oppgave 1](Oppgave 1)
   - [Oppgave 2](Oppgave 2)
+- [Øving 3: Aggregeringer](Øving 03)
