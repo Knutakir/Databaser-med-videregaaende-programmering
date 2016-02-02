@@ -18,3 +18,4 @@ Det er totalt 20 øvinger, og jeg vil legge ut alle etterhvert som de blir godkj
 - [Øving 6: Mer GUI](Øving 06)
 - [Øving 7: Relasjonsmodellen 1](Øving 07)
 - [Øving 8: Relasjonsmodellen 2](Øving 08)
+- [Øving 9: Fra tekst til SQL](Øving 09)
