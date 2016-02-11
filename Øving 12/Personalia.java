@@ -1,4 +1,8 @@
 /**
+Denne koden er laget og kommentert av foreleser.
+*/
+
+/**
  * Personalia.java
  *
  * Klasse med personopplysninger: fornavn, etternavn, epostadresse og passord.
