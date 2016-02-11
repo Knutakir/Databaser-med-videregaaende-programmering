@@ -18,6 +18,15 @@ Det er totalt 20 øvinger, og jeg vil legge ut alle etterhvert som de blir godkj
 - [Øving 6: Mer GUI](Øving 06)
 - [Øving 7: Relasjonsmodellen 1](Øving 07)
 - [Øving 8: Relasjonsmodellen 2](Øving 08)
-- [Øving 9: Fra tekst til SQL]
-- [Øving 10: Normalisering]
-- [Øving 11: EER-modellering]
+- [Øving 9: Fra tekst til SQL](Øving 09)
+- [Øving 10: Normalisering](Øving 10)
+- [Øving 11: EER-modellering](Øving 11)
+- [Øving 12: Arv og polymorfi]
+- [Øving 13: SQL 1](Øving 13)
+- [Øving 14: Arv og polymorfi 2]
+- [Øving 15: EER-modellering]
+- [Øving 16: SQL, del 2]
+- [Øving 17: Arv og polymorfi, del 3]
+- [Øving 18: Flerbrukerproblematikk]
+- [Øving 19: Mer om JDBC. Unntakshåndtering.]
+- [Øving 20: Transaksjonshåndtering i JDBC]
