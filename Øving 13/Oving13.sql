@@ -10,11 +10,10 @@ Skriv ut en liste over andelseiere. Listen skal ha linjer som ser slik ut (tekst
 "fornavn etternavn, ansiennitet: ansiennitet år".
 Listen skal være sortert på ansiennitet, de med lengst ansiennitet øverst.
  */
-SELECT fornavn, etternavn, ansiennitet FROM andelseier ORDER BY ansiennitet desc;
+--SELECT fornavn, etternavn, ansiennitet FROM andelseier ORDER BY ansiennitet desc;
+SELECT CONCAT(fornavn, " ", etternavn) AS navn, ansiennitet FROM andelseier ORDER BY ansiennitet DESC;
 
 --3) I hvilket år ble det eldste borettslaget etablert?
-----------SELECT MIN(borettslag.etabl_aar) FROM borettslag;
---med bedre forklaring i tilbakemeldingen
 SELECT MIN(etabl_aar) AS År FROM borettslag;
 
 --4) Finn adressene til alle bygninger som inneholder leiligheter med minst tre rom.
@@ -28,7 +27,7 @@ SELECT COUNT(*) FROM bygning WHERE bygning.bolag_navn = "Tertitten";
 Listen skal være sortert på borettslagsnavn.
 Husk at det kan finnes borettslag uten bygninger - de skal også med.
  */
-SELECT COUNT(*), borettslag.bolag_navn FROM bygning RIGHT JOIN borettslag ON (bygning.bolag_navn = borettslag.bolag_navn) GROUP BY borettslag.bolag_navn;
+SELECT COUNT(bygning.bolag_navn) AS antall, borettslag.bolag_navn FROM bygning RIGHT JOIN borettslag ON (bygning.bolag_navn = borettslag.bolag_navn) GROUP BY borettslag.bolag_navn;
 
 --7) Finn antall leiligheter i borettslaget "Tertitten".
 SELECT COUNT(*) AS antall, bolag_navn FROM leilighet NATURAL JOIN bygning WHERE bolag_navn = "Tertitten";
