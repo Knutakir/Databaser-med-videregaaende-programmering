@@ -21,7 +21,7 @@ Det er totalt 20 øvinger, og jeg vil legge ut alle etterhvert som de blir godkj
 - [Øving 9: Fra tekst til SQL](Øving 09)
 - [Øving 10: Normalisering](Øving 10)
 - [Øving 11: EER-modellering](Øving 11)
-- [Øving 12: Arv og polymorfi]
+- [Øving 12: Arv og polymorfi](Øving 12)
 - [Øving 13: SQL 1](Øving 13)
 - [Øving 14: Arv og polymorfi 2]
 - [Øving 15: EER-modellering]
