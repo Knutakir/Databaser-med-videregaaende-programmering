@@ -9,17 +9,13 @@ public class Medlemsarkiv {
 
     private ArrayList<BonusMedlem> medlemsListe = new ArrayList();
 
-    public Medlemsarkiv() {
-        System.out.println("hei");
-    }
-
     public double finnPoeng(int medlNr, String passord) {
         for(int i = 0; i < medlemsListe.size(); i++) {
             if((medlemsListe.get(i).getMedlNr() == medlNr) && (medlemsListe.get(i).okPassord(passord))) {
                 return medlemsListe.get(i).getPoeng();
             }
         }
-        return 0;
+        return -1.0;
     }
 
     public boolean registrerPoeng(int medlNr, int antPoeng) {
@@ -43,7 +39,7 @@ public class Medlemsarkiv {
     }
 
     public void nyMedlem(Personalia pers, LocalDate innmeldt) {
-        BasicMedlem nyttMedlem  = new BasicMedlem(finnLedigNr(), pers, innmeldt);
+        BasicMedlem nyttMedlem  = new BasicMedlem(finnLedigNr(), pers, innmeldt, 0);
         medlemsListe.add(nyttMedlem);
     }
 
@@ -57,7 +53,7 @@ public class Medlemsarkiv {
                     medlemsListe.set(i, nyttMedlem);
                     endretNoen = true;
                 } else {
-                    if(medlem1.finnKvalPoeng() < 0) {
+                    if(medlem1.getPoeng() >= 25000) {
                         SoelvMedlem nyttMedlem = new SoelvMedlem(medlem1.getMedlNr(), medlem1.getPersonalia(), medlem1.getInnmeldtDato(), medlem1.getPoeng());
                         medlemsListe.set(i, nyttMedlem);
                         endretNoen = true;
@@ -65,7 +61,7 @@ public class Medlemsarkiv {
                 }
             } else if (medlemsListe.get(i) instanceof SoelvMedlem) {
                 SoelvMedlem medlem2 = (SoelvMedlem) medlemsListe.get(i);
-                if(medlem2.finnKvalPoeng() < 0) {
+                if(medlem2.getPoeng() >= 75000) {
                     GullMedlem nyttMedlem = new GullMedlem(medlem2.getMedlNr(), medlem2.getPersonalia(), medlem2.getInnmeldtDato(), medlem2.getPoeng());
                     medlemsListe.set(i, nyttMedlem);
                     endretNoen = true;
@@ -78,7 +74,7 @@ public class Medlemsarkiv {
 
     private int finnLedigNr() {
         Random rnd = new Random();
-        int medlemsNummer = rnd.nextInt(1000000) + 1;
+        int medlemsNummer = rnd.nextInt(1000000) + 1000000;
         boolean gjorOm = true;
 
         while(gjorOm) {
@@ -88,12 +84,21 @@ public class Medlemsarkiv {
                     ledigNummer = false;
                 }
             }
-            if(ledigNummer) {
-                medlemsNummer = rnd.nextInt(1000000) + 1;
+            if(!ledigNummer) {
+                medlemsNummer = rnd.nextInt(1000000) + 1000000;
             } else {
                 gjorOm = false;
             }
         }
         return medlemsNummer;
+    }
+
+    @Override
+    public String toString() {
+        String utskrift = "Medlemmer:";
+        for(int i = 0; i < medlemsListe.size(); i++){
+            utskrift += "\n" + medlemsListe.get(i).toString();
+        }
+        return utskrift;
     }
 }

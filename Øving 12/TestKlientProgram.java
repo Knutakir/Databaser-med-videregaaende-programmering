@@ -1,36 +1,27 @@
-import javax.swing.*;
-
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 import static javax.swing.JOptionPane.*;
-//import static javax.swing.JOptionPane.showInputDialog;
-//import static javax.swing.JOptionPane.showMessageDialog;
-//import static javax.swing.JOptionPane.showOptionDialog;
 
 /**
  * Created by Bruker on 10.02.2016.
  */
 public class TestKlientProgram {
     public static void main(String[] args){
-        System.out.println("hei");
-        showMessageDialog(null, "test");
         Medlemsarkiv med = new Medlemsarkiv();
         //Registrere medlemmer:
         Personalia pers1 = new Personalia("Knut", "Kirkhorn", "asd@asd.no", "blablabla1234");
         med.nyMedlem(pers1, LocalDate.of(2006, 2, 15));
-        Personalia pers2 = new Personalia("asd", "asd", "asd2@asd.no", "sadasd2221r");
-        med.nyMedlem(pers2, LocalDate.of(2007, 2, 15));
-
-        showMessageDialog(null, "test");
+        Personalia pers2 = new Personalia("Ingunn", "Sund", "asd2@asd.no", "sadasd2221r");
+        med.nyMedlem(pers2, LocalDate.of(2015, 2, 15));
 
         final int FINN_POENG = 0;
         final int REG_POENG = 1;
         final int REG_MEDL = 2;
         final int SJEKK_MEDL = 3;
-        final int AVSLUTT = 4;
+        final int ALLE_MEDL = 4;
+        final int AVSLUTT = 5;
 
-        String[] muligheter = {"Finn poeng til medlem", "Registrer poeng", "Registrere et nytt medlem", "Sjekk medlemmer for oppgradering", "Avslutt"};
+        String[] muligheter = {"Finn poeng til medlem", "Registrer poeng", "Registrere et nytt medlem", "Sjekk medlemmer for oppgradering", "Alle medlemmer", "Avslutt"};
 
         int valg = showOptionDialog(null, "Hva vil du gjøre?", "Øving 12 - testklient", YES_NO_OPTION, INFORMATION_MESSAGE, null, muligheter, muligheter[0]);
 
@@ -40,10 +31,11 @@ public class TestKlientProgram {
                     int medlemsNummer = Integer.parseInt(showInputDialog("Skriv inn medlemsnummer:"));
                     String passord = showInputDialog("Skriv inn passord:");
                     double poeng = med.finnPoeng(medlemsNummer, passord);
-                    if(poeng > 0){
+                    double grense = -1.0;
+                    if(poeng > grense){
                         showMessageDialog(null, "Antall poeng til bruker med medlemsnummer: " + medlemsNummer + ": " + poeng);
                     } else {
-                        showMessageDialog(null, "Fant ikke noen bruker med medlemsnummer du skrev inn(" + medlemsNummer + ").");
+                        showMessageDialog(null, "Fant ikke noen bruker med dataen du skrev inn.");
                     }
                     break;
                 case REG_POENG:
@@ -63,25 +55,23 @@ public class TestKlientProgram {
                     String medlPassord = showInputDialog("Skriv inn et passord:");
                     Personalia pers = new Personalia(fornavn, etternavn, epostaddr, medlPassord);
 
-                    /*int aar = Integer.parseInt(showInputDialog("Skriv inn et år:"));
-                    int maaned = Integer.parseInt(showInputDialog("Skriv inn en måned:"));
-                    int dag = Integer.parseInt(showInputDialog("Skriv inn en dag:"));*/
-                    String dato = showInputDialog("Skriv inn en dato (yyyy-MM-dd"); //2005-nov-12
-                    DateTimeFormatter formatterer = DateTimeFormatter.ofPattern("yyyy-MMM-dd");
-                    LocalDate dato2 = LocalDate.parse(dato, formatterer);
-                    med.nyMedlem(pers, dato2);
+                    med.nyMedlem(pers, LocalDate.now());
                     showMessageDialog(null, "Det ble registrert et nytt medlem.");
                     break;
 
                 case SJEKK_MEDL:
                     if(med.sjekkMedlemmer()){
-                        showMessageDialog(null, "Du har oppgradert de medlemmer.");
+                        showMessageDialog(null, "Du har oppgradert medlemmer.");
                     } else {
                         showMessageDialog(null, "Det var ingen medlemmer å oppgradere. Alle var fullt oppgradert.");
                     }
                     break;
+
+                case ALLE_MEDL:
+                    showMessageDialog(null, med.toString());
+                    break;
             }
-            valg = showOptionDialog(null, "Hva vil du gjøre?", "Øving 12 - testklient", JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null, muligheter, muligheter[0]);
+            valg = showOptionDialog(null, "Hva vil du gjøre?", "Øving 12 - testklient", YES_NO_OPTION, INFORMATION_MESSAGE, null, muligheter, muligheter[0]);
 
         }
     }
