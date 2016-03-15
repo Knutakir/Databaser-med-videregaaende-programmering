@@ -31,8 +31,8 @@ public class TestKlient {
                     } else {
                         showMessageDialog(null, "Kunne ikke registrere en bok med gitte data.");
                     }
-
                     break;
+                
                 case REG_EKS:
                     String isbn2 = showInputDialog("Skriv inn isbn til boken: ");
                     int eksempelNr = databasen.regNyttEksemplar(isbn2);
@@ -41,7 +41,6 @@ public class TestKlient {
                     } else {
                         showMessageDialog(null, "Det eksisterer ingen bøker med gitt isbn-verdi, derfor kunne ingen nye eksempler registreres.");
                     }
-
                     break;
 
                 case LAAN_BOK:
