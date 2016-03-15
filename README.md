@@ -27,6 +27,6 @@ Det er totalt 20 øvinger, og jeg vil legge ut alle etterhvert som de blir godkj
 - [Øving 15: EER-modellering 2](Øving 15)
 - [Øving 16: SQL 2](Øving 16)
 - [Øving 17: Arv og polymorfi 3](Øving 17)
-- [Øving 18: Flerbrukerproblematikk]
-- [Øving 19: Mer om JDBC. Unntakshåndtering.]
+- [Øving 18: Flerbrukerproblematikk](Øving 18)
+- [Øving 19: Mer om JDBC. Unntakshåndtering.](Øving 19)
 - [Øving 20: Transaksjonshåndtering i JDBC]
