@@ -29,4 +29,4 @@ Det er totalt 20 øvinger, og jeg vil legge ut alle etterhvert som de blir godkj
 - [Øving 17: Arv og polymorfi 3](Øving 17)
 - [Øving 18: Flerbrukerproblematikk](Øving 18)
 - [Øving 19: Mer om JDBC. Unntakshåndtering.](Øving 19)
-- [Øving 20: Transaksjonshåndtering i JDBC]
+- [Øving 20: Transaksjonshåndtering i JDBC](Øving 20)
