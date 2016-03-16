@@ -33,6 +33,10 @@ public class Database {
         }
     }
 
+    public void fakturer(int maanedsnummer, String tekstfil) {
+
+    }
+
     public void stoppForbindelse() {
         try{
             setning.close();
