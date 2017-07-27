@@ -30,3 +30,6 @@ Det er totalt 20 øvinger, og jeg vil legge ut alle etterhvert som de blir godkj
 - [Øving 18: Flerbrukerproblematikk](Øving%2018)
 - [Øving 19: Mer om JDBC. Unntakshåndtering.](Øving%2019)
 - [Øving 20: Transaksjonshåndtering i JDBC](Øving%2020)
+
+## Se andre emner
+Se [liste-over-emener](https://github.com/Knutakir/liste-over-emner) for en liste over alle emner jeg har hatt på NTNU.
