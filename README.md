@@ -1,5 +1,5 @@
 # Databaser med videregående programmering
-Øvinger fra TDAT1005 Databaser med videregående programmering, våren 2016, 1. dataingeniør på NTNU.
+Øvinger fra TDAT1005 Databaser med videregående programmering, våren 2016, 1. klasse dataingeniør på NTNU.
 
 ## Øvinger
 - [Øving 1: Repetisjon](Øving%2001)
